@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "e116f3b7-8e44-4a82-bf6b-e46825e5409b",
+		"name": "Basic Microservice Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register Supplier",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2a06cf35-5425-40d1-8803-830e5397d7f5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"\r",
+							"    pm.response.to.have.status(200);\r",
+							"    var jsonData = pm.response.json();\r",
+							"\r",
+							"    pm.environment.set(\"Id\", jsonData.id);\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyName\":\"Geraldo e Milena Entulhos Ltda\",\r\n    \"enterpriseRegistry\":\"01.104.238/0001-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Supplier",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyName\":\"Geraldo e Milena Entulhos Ltda\",\r\n    \"enterpriseRegistry\":\"01.104.238/0001-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/{{Id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"{{Id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
