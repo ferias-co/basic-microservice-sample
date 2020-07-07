@@ -19,6 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{85C5B9D1-F
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevOps", "DevOps", "{4ECF0046-61EA-4882-802A-26826FEA7F37}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Enterprise Business Rules", "1. Enterprise Business Rules", "{41BB517C-03EE-4F0C-B98B-B4274FAAEF58}"
 EndProject
@@ -28,21 +31,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "src\Entities\En
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application Business Rules", "2. Application Business Rules", "{883D9E3E-8BB2-45EB-B364-AA89A8A3289C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usecases", "src\Usecases\Usecases.csproj", "{FA3FC008-F9D0-4466-9D19-606080505183}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Usecases", "src\Usecases\Usecases.csproj", "{FA3FC008-F9D0-4466-9D19-606080505183}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usecases.UnitTests", "test\Usecases.UnitTests\Usecases.UnitTests.csproj", "{E3E75568-A0AF-4B8D-A9CA-82A529A1B199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Usecases.UnitTests", "test\Usecases.UnitTests\Usecases.UnitTests.csproj", "{E3E75568-A0AF-4B8D-A9CA-82A529A1B199}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Interface Adapters", "3. Interface Adapters", "{63549F3B-F2E5-4AF9-8E38-D6D306588FCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateways", "src\Gateways\Gateways.csproj", "{2EF3E5AA-9E8C-4719-B7BF-3EFD0984560F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateways", "src\Gateways\Gateways.csproj", "{2EF3E5AA-9E8C-4719-B7BF-3EFD0984560F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. User Interfaces", "4. User Interfaces", "{FAD6D7C3-CB75-47B8-84C9-CA58A7C65314}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "src\Controllers\Controllers.csproj", "{D1C88D38-DA76-46F3-9229-D39C6DEDD806}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controllers", "src\Controllers\Controllers.csproj", "{D1C88D38-DA76-46F3-9229-D39C6DEDD806}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers.UnitTests", "test\Controllers.UnitTests\Controllers.UnitTests.csproj", "{EB644B3B-7322-43CD-93DC-28BCE9783DBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controllers.UnitTests", "test\Controllers.UnitTests\Controllers.UnitTests.csproj", "{EB644B3B-7322-43CD-93DC-28BCE9783DBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "src\WebApplication\WebApplication.csproj", "{9EB488A4-7588-4E46-9E28-8AC7E6DAC5E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "src\WebApplication\WebApplication.csproj", "{9EB488A4-7588-4E46-9E28-8AC7E6DAC5E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
