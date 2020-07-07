@@ -2,13 +2,13 @@
 
 ![GitHub Logo](https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
 
-Though these architectures all vary somewhat in their details, they are very similar. They all have the same objective, which is the separation of concerns. They all achieve this separation by dividing the software into layers. Each has at least one layer for business rules, and another for interfaces.
+Embora todas essas arquiteturas variem um pouco em seus detalhes, elas são muito semelhantes. 
+Todos eles têm o mesmo objetivo, que é a separação de preocupações. Todos eles alcançam essa separação dividindo o software em camadas. Cada um possui pelo menos uma camada para regras de negócios e outra para interfaces.
 
-Each of these architectures produce systems that are:
+Cada uma dessas arquiteturas produz sistemas que são:
 
-- Independent of Frameworks. The architecture does not depend on the existence of some library of feature laden software. This allows you to use such frameworks as tools, rather than having to cram your system into their limited constraints.
-Testable. 
-- The business rules can be tested without the UI, Database, Web Server, or any other external element.
- - Independent of UI. The UI can change easily, without changing the rest of the system. A Web UI could be replaced with a console UI, for example, without changing the business rules.
-- Independent of Database. You can swap out Oracle or SQL Server, for Mongo, BigTable, CouchDB, or something else. Your business rules are not bound to the database.
-- Independent of any external agency. In fact your business rules simply don’t know anything at all about the outside world.
+ - Independente das estruturas: A arquitetura não depende da existência de alguma biblioteca de software carregado de recursos. Isso permite que você use essas estruturas como ferramentas, em vez de ter que limitar seu sistema às restrições limitadas. Testável.
+ - As regras de negócios podem ser testadas sem a interface do usuário, banco de dados, servidor da Web ou qualquer outro elemento externo.
+ - Independente da interface do usuário. A interface do usuário pode mudar facilmente, sem alterar o restante do sistema. Uma interface da Web pode ser substituída por uma interface do console, por exemplo, sem alterar as regras de negócios.
+ - Independente do banco de dados. Você pode trocar o Oracle ou SQL Server, por Mongo, BigTable, CouchDB ou qualquer outra coisa. Suas regras de negócios não estão vinculadas ao banco de dados.
+ - Independente de qualquer agência externa. Na verdade, suas regras de negócios simplesmente não sabem nada sobre o mundo exterior.
