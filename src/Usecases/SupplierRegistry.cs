@@ -1,7 +1,9 @@
 ﻿using Entities;
+using System;
 using Usecases.Boundaries.Inputs;
 using Usecases.Boundaries.Outputs;
 using Usecases.Contracts;
+using Usecases.Mappers;
 
 namespace Usecases
 {
@@ -10,28 +12,20 @@ namespace Usecases
         private readonly IStorableSupplier _storage;
 
         public SupplierRegistry(IStorableSupplier storage) {
-            _storage = storage;
+            _storage = storage ?? throw new ArgumentNullException(nameof(storage));
         }
 
         public SupplierIdOutput Handle(SupplierInput input)
         {
-            Supplier supplier = SupplierMapper(input);
+            Supplier supplier = MapperSupplierIntput.Map(input);
 
             _storage.PushSupplier(supplier);
-            return MapperSupplierOutput(supplier);
+
+            return MapperSupplierIdOutput.Map(supplier);
         }
 
-        public static SupplierIdOutput MapperSupplierOutput(Supplier supplier)
-        {
-            return new SupplierIdOutput
-            {
-                Id = supplier.Id.ToString()
-            };
-        }
+        
 
-        public static Supplier SupplierMapper(SupplierInput input)
-        {
-            return new Supplier(input.EnterpriseRegistry, input.CompanyName);
-        }
+      
     }
 }

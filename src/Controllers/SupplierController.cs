@@ -8,21 +8,21 @@ namespace Controllers
 
     [Route("")]
     [ApiController]
-    public class SupplierController : ControllerBase
+    public class SupplierController
     {
 
         [HttpPost]
-        public IActionResult Post([FromBody]SupplierInput input, 
+        public SupplierIdOutput Post([FromBody]SupplierInput input, 
             [FromServices] IHandleable<SupplierInput, SupplierIdOutput> usecase) 
         {
-            return new OkObjectResult( usecase.Handle(input) );
+            return  usecase.Handle(input);
         }
 
         [HttpGet("{id}")]
-        public IActionResult Get(string id,
+        public SupplierOutput Get(string id,
             [FromServices] IHandleable<string, SupplierOutput> usecase)
         {
-            return new OkObjectResult(usecase.Handle(id));
+            return usecase.Handle(id);
         }
     }
 }

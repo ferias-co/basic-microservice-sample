@@ -8,11 +8,6 @@ namespace Usecases.Boundaries.Inputs
         public string CompanyName { get; set; }
         public string EnterpriseRegistry { get; set; }
 
-        public SupplierOutput(Supplier supplier) 
-        {
-            Id = supplier.Id.ToString();
-            CompanyName = supplier.CompanyName;
-            EnterpriseRegistry = supplier.EntepriseRegistry;
-        }
+        
     }
 }

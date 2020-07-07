@@ -20,7 +20,8 @@ namespace Controllers.UnitTests
 
             var output = controller.Post(input, usecase);
 
-            Assert.Equal(input.EnterpriseRegistry, output.Id);
+            Assert.NotNull(output.Id);
         }
+
     }
 }
