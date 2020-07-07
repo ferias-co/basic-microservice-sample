@@ -1,0 +1,27 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Development": {
+      "commandName": "Project",
+      "applicationUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CONNECTION_STRING": "mongodb://localhost:27017",
+        "SUPPLIER_DATABASE": "suppliers",
+        "SUPPLIER_REPOSITORY": "suppliers"
+      }
+    },
+
+    "Sandbox": {
+      "commandName": "Project",
+      "applicationUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Sandbox",
+        "CONNECTION_STRING": "",
+        "SUPPLIER_DATABASE": "",
+        "SUPPLIER_REPOSITORY": ""
+
+      }
+    }
+  }
+}
