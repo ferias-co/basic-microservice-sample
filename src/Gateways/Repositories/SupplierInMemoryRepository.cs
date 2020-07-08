@@ -8,16 +8,16 @@ namespace Gateways.Storages
 {
     public class SupplierInMemoryRepository : IStorableSupplier
     {
-        private List<SupplierDataStruct> _collection;
+        private List<SupplierModel> _collection;
 
         public SupplierInMemoryRepository()
         {
-            _collection = new List<SupplierDataStruct>();
+            _collection = new List<SupplierModel>();
         }
 
         public void PushSupplier(Supplier supplier)
         {
-            _collection.Add( new SupplierDataStruct ( supplier ) );
+            _collection.Add( new SupplierModel ( supplier ) );
         }
 
         public Supplier QuerySuppliers(string id)

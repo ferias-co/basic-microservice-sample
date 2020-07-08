@@ -6,7 +6,7 @@ using System;
 namespace Gateways.Models
 {
     [BsonIgnoreExtraElements]
-    public class SupplierDataStruct
+    public class SupplierModel
     {
 
         [BsonId]
@@ -22,14 +22,14 @@ namespace Gateways.Models
         public string EnterpriseRegistry { get; set; }
 
 
-        public SupplierDataStruct(Supplier supplier)
+        public SupplierModel(Supplier supplier)
         {
             Id = supplier.Id;
             CompanyName = supplier.CompanyName;
             EnterpriseRegistry = supplier.EntepriseRegistry;
         }
 
-        public SupplierDataStruct() { 
+        public SupplierModel() { 
         
         }
     }

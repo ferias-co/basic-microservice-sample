@@ -8,16 +8,16 @@ namespace Gateways.Storages
 {
     public class SupplieRepository : IStorableSupplier
     {
-        private IMongoCollection<SupplierDataStruct> _collection;
+        private IMongoCollection<SupplierModel> _collection;
 
-        public SupplieRepository(IMongoCollection<SupplierDataStruct> collection)
+        public SupplieRepository(IMongoCollection<SupplierModel> collection)
         {
             _collection = collection;
         }
 
         public void PushSupplier(Supplier supplier)
         {
-            _collection.InsertOne( new SupplierDataStruct ( supplier ) );
+            _collection.InsertOne( new SupplierModel ( supplier ) );
         }
 
         public Supplier QuerySuppliers(string id)

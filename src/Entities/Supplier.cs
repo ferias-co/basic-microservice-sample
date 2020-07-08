@@ -21,5 +21,7 @@ namespace Entities
         public Guid Id { get; private set; }
         public EnterpriseRegistry EntepriseRegistry { get; private set; }
         public CompanyName CompanyName { get; private set; }
+
+
     }
 }
