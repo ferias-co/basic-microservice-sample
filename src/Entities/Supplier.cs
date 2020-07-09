@@ -6,7 +6,11 @@ namespace Entities
     public class Supplier
     {
 
-        public Supplier(Guid id, EnterpriseRegistry registry, CompanyName name) : base()
+        public Guid Id { get; private set; }
+        public EnterpriseRegistry EntepriseRegistry { get; private set; }
+        public CompanyName CompanyName { get; private set; }
+
+        public Supplier(Guid id, EnterpriseRegistry registry, CompanyName name)
         {
             Id = id;
             EntepriseRegistry = registry;
@@ -17,11 +21,6 @@ namespace Entities
         {
 
         }
-
-        public Guid Id { get; private set; }
-        public EnterpriseRegistry EntepriseRegistry { get; private set; }
-        public CompanyName CompanyName { get; private set; }
-
 
     }
 }

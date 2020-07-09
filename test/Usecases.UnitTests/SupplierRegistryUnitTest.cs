@@ -15,7 +15,7 @@ namespace Usecases.UnitTests
             var usecase = new SupplierRegistry( new SupplierMockRepository() );
             var outbound = usecase.Handle(input);
 
-            Assert.Equal(input.EnterpriseRegistry, outbound.Id);
+            Assert.NotNull(outbound.Id);
         }
     }
 }

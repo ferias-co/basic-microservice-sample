@@ -21,15 +21,15 @@ namespace Gateways.Models
         [BsonElement("enterprise_registry")]
         public string EnterpriseRegistry { get; set; }
 
-
         public SupplierModel(Supplier supplier)
         {
-            Id = supplier.Id;
-            CompanyName = supplier.CompanyName;
-            EnterpriseRegistry = supplier.EntepriseRegistry;
+            Id                  = supplier.Id;
+            CompanyName         = supplier.CompanyName;
+            EnterpriseRegistry  = supplier.EntepriseRegistry;
         }
 
-        public SupplierModel() { 
+        public SupplierModel()
+        {
         
         }
     }

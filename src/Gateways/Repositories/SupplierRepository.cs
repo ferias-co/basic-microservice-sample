@@ -3,6 +3,7 @@ using Entities;
 using Usecases.Contracts;
 using Gateways.Models;
 using MongoDB.Driver.Linq;
+using Gateways.Mappers;
 
 namespace Gateways.Storages
 {
@@ -22,12 +23,12 @@ namespace Gateways.Storages
 
         public Supplier QuerySuppliers(string id)
         {
-            var ds = _collection
+            var model = _collection
                    .AsQueryable()
                        .Where(_ => id.Equals(_.Id.ToString()))
                         .SingleOrDefault();
 
-            return new Supplier(ds.Id, ds.EnterpriseRegistry, ds.CompanyName);
+            return ModelToEntityMapper.Map(model);
         }
     }
 }

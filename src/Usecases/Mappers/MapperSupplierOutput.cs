@@ -1,6 +1,5 @@
 ﻿using Entities;
 using Usecases.Boundaries.Inputs;
-using Usecases.Boundaries.Outputs;
 
 namespace Usecases.Mappers
 {
@@ -10,9 +9,9 @@ namespace Usecases.Mappers
         {
             return new SupplierOutput
             {
-                Id = supplier.Id.ToString(),
-                CompanyName = supplier.CompanyName,
-                EnterpriseRegistry = supplier.EntepriseRegistry
+                Id                  = supplier.Id.ToString(),
+                CompanyName         = supplier.CompanyName,
+                EnterpriseRegistry  = supplier.EntepriseRegistry
             };
         }
     }

@@ -3,6 +3,7 @@ using Usecases.Contracts;
 using Gateways.Models;
 using System.Collections.Generic;
 using System;
+using Gateways.Mappers;
 
 namespace Gateways.Storages
 {
@@ -17,16 +18,16 @@ namespace Gateways.Storages
 
         public void PushSupplier(Supplier supplier)
         {
+
             _collection.Add( new SupplierModel ( supplier ) );
         }
 
         public Supplier QuerySuppliers(string id)
         {
-            var ds = _collection.Find(_ => id == _.Id.ToString());
+            var model = _collection.Find( _ => id == _.Id.ToString() ) 
+                ?? throw new ArgumentNullException( nameof(QuerySuppliers) );
 
-            if (ds == null) throw new ArgumentNullException(nameof(id));
-            
-            return new Supplier(ds.Id, ds.EnterpriseRegistry, ds.CompanyName);
+            return ModelToEntityMapper.Map(model);
         }
     }
 }

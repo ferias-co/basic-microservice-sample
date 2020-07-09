@@ -12,7 +12,7 @@ namespace Usecases
         private readonly IStorableSupplier _storage;
 
         public SupplierRegistry(IStorableSupplier storage) {
-            _storage = storage ?? throw new ArgumentNullException(nameof(storage));
+            _storage = storage ?? throw new ArgumentNullException( nameof(storage) );
         }
 
         public SupplierIdOutput Handle(SupplierInput input)

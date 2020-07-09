@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
 
 namespace Entities.CustomTypes
 {
-    public sealed class EnterpriseRegistry : IComparable<string>
+    public sealed class EnterpriseRegistry
     {
         
         private const string FORMAT = @"\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{1,2}";
@@ -32,24 +31,5 @@ namespace Entities.CustomTypes
             return instance.Value;
         }
 
-        public int CompareTo([AllowNull] string other)
-        {
-            return Value.CompareTo(other);
-        }
-
-        public override string ToString()
-        {
-            return Value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return Value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return Value.GetHashCode();
-        }
     }
 }

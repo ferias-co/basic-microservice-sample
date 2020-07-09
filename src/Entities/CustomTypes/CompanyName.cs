@@ -3,14 +3,14 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Entities.CustomTypes
 {
-    public sealed class CompanyName : IComparable<string>
+    public sealed class CompanyName
     {
         public string Value { get; private set; }
 
         private CompanyName(string str) 
         {
 
-            if (string.IsNullOrEmpty(str)) 
+            if ( string.IsNullOrEmpty(str) ) 
                 throw new ArgumentNullException( nameof (CompanyName) );
 
             Value = str;
@@ -25,26 +25,6 @@ namespace Entities.CustomTypes
         public static implicit operator string(CompanyName instance)
         {
             return instance.Value;
-        }
-
-        public int CompareTo([AllowNull] string other)
-        {
-            return Value.CompareTo(other);
-        }
-
-        public override string ToString()
-        {
-            return Value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return Value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return Value.GetHashCode();
         }
 
     }
